@@ -59,7 +59,32 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (HASAdTB.Text == "" || HasTelTB.Text == "" || HasAdresTB.Text == "" || HasALTB.Text == "" || CinCB.SelectedIndex == -1)
+                {
+                    MessageBox.Show("kaybolan veri");
 
+                }
+                else
+                {
+                    String Ad = HASAdTB.Text;
+                    String Tel = HasTelTB.Text;
+                    String Adres = HasAdresTB.Text;
+                    String Cinsiyet = CinCB.SelectedItem.ToString();
+                    String Alerji = HasALTB.Text;
+                    String Query = "insert into HastalarTbl values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')";
+                    Query = String.Format(Query, Ad, Tel, Adres, DtDP.Value.Date);
+                    con.SetData(Query);
+                    ShowHastalar();
+                    MessageBox.Show(" Hasta Eklendi");
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
