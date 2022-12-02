@@ -78,6 +78,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     con.SetData(Query);
                     ShowHastalar();
                     MessageBox.Show(" Hasta Eklendi");
+                    HASAdTB.Text = "";
+                    HasTelTB.Text = "";
+                    HasALTB.Text = "";
+                    HasAdresTB.Text = "";
+                    CinCB.SelectedIndex = -1;
 
                 }
             }
@@ -151,7 +156,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
