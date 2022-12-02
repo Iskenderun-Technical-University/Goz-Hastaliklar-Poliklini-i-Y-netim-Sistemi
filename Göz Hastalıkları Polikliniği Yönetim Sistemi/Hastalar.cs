@@ -159,6 +159,20 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            HASAdTB.Text = HastaListesi.SelectedRows[0].Cells[1].Value.ToString();
+            HasTelTB.Text = HastaListesi.SelectedRows[0].Cells[2].Value.ToString();
+            HasAdresTB.Text = HastaListesi.SelectedRows[0].Cells[3].Value.ToString();
+            DtDP.Text = HastaListesi.SelectedRows[0].Cells[4].Value.ToString();
+            CinCB.Text = HastaListesi.SelectedRows[0].Cells[5].Value.ToString();
+            HasALTB.Text = HastaListesi.SelectedRows[0].Cells[6].Value.ToString();
+            if (HASAdTB.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Convert.ToInt32(HastaListesi.SelectedRows[0].Cells[0].Value.ToString());
+            }
 
         }
 
