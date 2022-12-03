@@ -10,7 +10,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
     internal class fonkisyon
     {
-        private SqlConnection con;
+        private SqlConnection Con;
         private SqlCommand cmd;
         private DataTable dt;
         private SqlDataAdapter sda;
@@ -18,9 +18,9 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         public fonkisyon()
         {
             constr = @"Data Source=DESKTOP-MDN807P;Initial Catalog=GözPol;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            con = new SqlConnection(constr);
+            Con = new SqlConnection(constr);
             cmd = new SqlCommand();
-            cmd.Connection = con;
+            cmd.Connection = Con;
         }
         public DataTable GetData(string Query)
         {
@@ -33,13 +33,13 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         public int SetData(String Quary)
         {
             int cnt = 0;
-            if (con.State == ConnectionState.Closed)
+            if (Con.State == ConnectionState.Closed)
             {
-                con.Open();
+                Con.Open();
             }
             cmd.CommandText = Quary;
             cnt = cmd.ExecuteNonQuery();
-            con.Close();
+           Con.Close();
             return cnt;
         }
 

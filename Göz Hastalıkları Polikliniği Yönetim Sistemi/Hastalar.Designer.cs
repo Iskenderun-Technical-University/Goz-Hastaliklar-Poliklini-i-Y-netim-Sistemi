@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hastalar));
             this.panel2 = new System.Windows.Forms.Panel();
             this.KaydetBtn = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.HASAdTB = new System.Windows.Forms.TextBox();
             this.HasTelTB = new System.Windows.Forms.TextBox();
             this.HasAdresTB = new System.Windows.Forms.TextBox();
-            this.DtDP = new Bunifu.Framework.UI.BunifuDatepicker();
             this.CinCB = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.HasYasTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -147,11 +148,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.HasYasTB);
             this.panel4.Controls.Add(this.HasALTB);
             this.panel4.Controls.Add(this.HASAdTB);
             this.panel4.Controls.Add(this.HasTelTB);
             this.panel4.Controls.Add(this.HasAdresTB);
-            this.panel4.Controls.Add(this.DtDP);
             this.panel4.Controls.Add(this.CinCB);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
@@ -167,48 +168,36 @@
             // 
             // HasALTB
             // 
-            this.HasALTB.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.HasALTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HasALTB.Location = new System.Drawing.Point(30, 470);
             this.HasALTB.Name = "HasALTB";
-            this.HasALTB.Size = new System.Drawing.Size(250, 40);
+            this.HasALTB.Size = new System.Drawing.Size(250, 21);
             this.HasALTB.TabIndex = 21;
             // 
             // HASAdTB
             // 
-            this.HASAdTB.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.HASAdTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HASAdTB.Location = new System.Drawing.Point(30, 53);
             this.HASAdTB.Name = "HASAdTB";
-            this.HASAdTB.Size = new System.Drawing.Size(250, 40);
+            this.HASAdTB.Size = new System.Drawing.Size(250, 21);
             this.HASAdTB.TabIndex = 20;
+            this.HASAdTB.TextChanged += new System.EventHandler(this.HASAdTB_TextChanged);
             // 
             // HasTelTB
             // 
-            this.HasTelTB.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.HasTelTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HasTelTB.Location = new System.Drawing.Point(30, 137);
             this.HasTelTB.Name = "HasTelTB";
-            this.HasTelTB.Size = new System.Drawing.Size(250, 40);
+            this.HasTelTB.Size = new System.Drawing.Size(250, 21);
             this.HasTelTB.TabIndex = 19;
             // 
             // HasAdresTB
             // 
-            this.HasAdresTB.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.HasAdresTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HasAdresTB.Location = new System.Drawing.Point(30, 232);
             this.HasAdresTB.Name = "HasAdresTB";
-            this.HasAdresTB.Size = new System.Drawing.Size(250, 40);
+            this.HasAdresTB.Size = new System.Drawing.Size(250, 21);
             this.HasAdresTB.TabIndex = 18;
-            // 
-            // DtDP
-            // 
-            this.DtDP.BackColor = System.Drawing.Color.Teal;
-            this.DtDP.BorderRadius = 0;
-            this.DtDP.ForeColor = System.Drawing.Color.White;
-            this.DtDP.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DtDP.FormatCustom = null;
-            this.DtDP.Location = new System.Drawing.Point(30, 304);
-            this.DtDP.Name = "DtDP";
-            this.DtDP.Size = new System.Drawing.Size(303, 36);
-            this.DtDP.TabIndex = 17;
-            this.DtDP.Value = new System.DateTime(2022, 11, 24, 16, 32, 15, 894);
             // 
             // CinCB
             // 
@@ -216,7 +205,7 @@
             this.CinCB.BackColor = System.Drawing.Color.White;
             this.CinCB.Cursor = System.Windows.Forms.Cursors.Default;
             this.CinCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CinCB.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CinCB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CinCB.ForeColor = System.Drawing.Color.Teal;
             this.CinCB.FormattingEnabled = true;
             this.CinCB.Items.AddRange(new object[] {
@@ -224,7 +213,7 @@
             "Kadın"});
             this.CinCB.Location = new System.Drawing.Point(30, 398);
             this.CinCB.Name = "CinCB";
-            this.CinCB.Size = new System.Drawing.Size(274, 33);
+            this.CinCB.Size = new System.Drawing.Size(274, 21);
             this.CinCB.TabIndex = 12;
             this.CinCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -271,9 +260,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(25, 275);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 26);
+            this.label3.Size = new System.Drawing.Size(119, 26);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Hasta doğum tarihi";
+            this.label3.Text = "Hasta Yaşı";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -317,6 +306,8 @@
             this.HastaListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HastaListesi.Location = new System.Drawing.Point(3, 53);
             this.HastaListesi.Name = "HastaListesi";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HastaListesi.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.HastaListesi.Size = new System.Drawing.Size(482, 436);
             this.HastaListesi.TabIndex = 2;
             this.HastaListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -516,6 +507,14 @@
             this.bunifuElipse5.ElipseRadius = 20;
             this.bunifuElipse5.TargetControl = this.KaydetBtn;
             // 
+            // HasYasTB
+            // 
+            this.HasYasTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HasYasTB.Location = new System.Drawing.Point(30, 319);
+            this.HasYasTB.Name = "HasYasTB";
+            this.HasYasTB.Size = new System.Drawing.Size(250, 21);
+            this.HasYasTB.TabIndex = 22;
+            // 
             // Hastalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,11 +580,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuDatepicker DtDP;
         private System.Windows.Forms.TextBox HasALTB;
         private System.Windows.Forms.TextBox HASAdTB;
         private System.Windows.Forms.TextBox HasTelTB;
         private System.Windows.Forms.TextBox HasAdresTB;
+        private System.Windows.Forms.TextBox HasYasTB;
     }
 }
 
