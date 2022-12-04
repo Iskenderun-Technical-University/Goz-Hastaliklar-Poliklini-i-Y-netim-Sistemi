@@ -36,5 +36,33 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Form1 obj = new Form1();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Tedavi obj = new Tedavi();
+            obj.ShowDialog();
+            this.Hide();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Hastalar obj = new Hastalar();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Reçete obj = new Reçete();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

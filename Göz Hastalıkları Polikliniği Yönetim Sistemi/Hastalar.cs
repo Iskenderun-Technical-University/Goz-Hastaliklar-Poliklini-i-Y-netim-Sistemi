@@ -59,7 +59,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     string Cinsiyet = CinCB.SelectedItem.ToString();
                     string Alerji = HasALTB.Text;
                     string Yas = HasYasTB.Text;
-                    string Query = "güncelleme HastalarTbl HASAd ='{0}',HasTel = '{1}',HasAdres = '{2}',DtDP = '{3}',CinCB = '{4}',HasAlerji = '{5}' , where HasNumara = '{6}'";
+                    string Query = "update HastalarTbl  set HasAdı ='{0}',HasTel = '{1}',HasAdres = '{2}',HasYas = '{3}',HasCinsiyeti = '{4}',HasAlerji = '{5}'  where Hasİd= '{6}'";
 
                     Query = string.Format(Query, Ad, Tel, Adres, Yas, Cinsiyet, Alerji, Key);
                     Con.SetData(Query);
@@ -140,7 +140,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 else
                 {
                     
-                    string Query = " sil HastalarTbl  where HasNumara = '{0}'";
+                    string Query = " delete from HastalarTbl  where Hasİd = '{0}'";
 
                     Query = string.Format(Query, Key);
                     Con.SetData(Query);
@@ -224,6 +224,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             HASAdTB.Text = HastaListesi.SelectedRows[0].Cells[1].Value.ToString();
+           
             HasTelTB.Text = HastaListesi.SelectedRows[0].Cells[2].Value.ToString();
             HasAdresTB.Text = HastaListesi.SelectedRows[0].Cells[3].Value.ToString();
             HasYasTB.Text = HastaListesi.SelectedRows[0].Cells[4].Value.ToString();
@@ -287,21 +288,31 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
         private void label9_Click(object sender, EventArgs e)
         {
+            Reçete obj = new Reçete();
+            obj.Show();
+            this.Hide();
 
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-
+            Form1 obj = new Form1();
+            obj.Show();
+            this.Hide();
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
-
+            Tedavi obj = new Tedavi();
+            obj.ShowDialog();
+            this.Hide();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
+            Hastalar obj = new Hastalar();
+            obj.Show();
+            this.Hide();
 
         }
 

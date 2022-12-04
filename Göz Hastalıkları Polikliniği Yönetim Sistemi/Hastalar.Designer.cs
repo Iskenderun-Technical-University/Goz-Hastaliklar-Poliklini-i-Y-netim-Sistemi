@@ -37,6 +37,7 @@
             this.SilBtn = new System.Windows.Forms.Button();
             this.GuncellemeBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.HasYasTB = new System.Windows.Forms.TextBox();
             this.HasALTB = new System.Windows.Forms.TextBox();
             this.HASAdTB = new System.Windows.Forms.TextBox();
             this.HasTelTB = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.HasYasTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -165,6 +165,14 @@
             this.panel4.Size = new System.Drawing.Size(447, 561);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // HasYasTB
+            // 
+            this.HasYasTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HasYasTB.Location = new System.Drawing.Point(30, 319);
+            this.HasYasTB.Name = "HasYasTB";
+            this.HasYasTB.Size = new System.Drawing.Size(250, 21);
+            this.HasYasTB.TabIndex = 22;
             // 
             // HasALTB
             // 
@@ -308,6 +316,7 @@
             this.HastaListesi.Name = "HastaListesi";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HastaListesi.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.HastaListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HastaListesi.Size = new System.Drawing.Size(482, 436);
             this.HastaListesi.TabIndex = 2;
             this.HastaListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -506,14 +515,6 @@
             // 
             this.bunifuElipse5.ElipseRadius = 20;
             this.bunifuElipse5.TargetControl = this.KaydetBtn;
-            // 
-            // HasYasTB
-            // 
-            this.HasYasTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HasYasTB.Location = new System.Drawing.Point(30, 319);
-            this.HasYasTB.Name = "HasYasTB";
-            this.HasYasTB.Size = new System.Drawing.Size(250, 21);
-            this.HasYasTB.TabIndex = 22;
             // 
             // Hastalar
             // 
