@@ -92,6 +92,20 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            HASTB.Text = RandevuListesi.SelectedRows[0].Cells[1].Value.ToString();
+
+            RantarTB.Text = RandevuListesi.SelectedRows[0].Cells[2].Value.ToString();
+            RanZaCm.Text = RandevuListesi.SelectedRows[0].Cells[3].Value.ToString();
+
+            if (HASTB.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(RandevuListesi.SelectedRows[0].Cells[0].Value.ToString());
+            }
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
