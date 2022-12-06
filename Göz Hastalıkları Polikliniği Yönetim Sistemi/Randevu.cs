@@ -183,6 +183,37 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (Key == 0)
+                {
+                    MessageBox.Show("hastayı seç");
+
+                }
+                else
+                {
+
+                    string Query = " delete from HastalarTbl  where Hasİd = '{0}'";
+
+                    Query = string.Format(Query, Key);
+                    Con.SetData(Query);
+                    ShowRandevu();
+                    MessageBox.Show(" Hasta Silindi");
+                    HASTB.Text = "";
+                    RantarTB.Text = "";
+                    RanZaCm.SelectedIndex = -1;
+                   
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
 

@@ -36,6 +36,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.RantarTB = new System.Windows.Forms.TextBox();
+            this.HASTB = new System.Windows.Forms.TextBox();
             this.RanZaCm = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.HASTB = new System.Windows.Forms.TextBox();
-            this.RantarTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -121,6 +121,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -150,6 +151,22 @@
             this.panel4.Size = new System.Drawing.Size(452, 395);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // RantarTB
+            // 
+            this.RantarTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RantarTB.Location = new System.Drawing.Point(30, 158);
+            this.RantarTB.Name = "RantarTB";
+            this.RantarTB.Size = new System.Drawing.Size(250, 21);
+            this.RantarTB.TabIndex = 22;
+            // 
+            // HASTB
+            // 
+            this.HASTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HASTB.Location = new System.Drawing.Point(30, 68);
+            this.HASTB.Name = "HASTB";
+            this.HASTB.Size = new System.Drawing.Size(250, 21);
+            this.HASTB.TabIndex = 21;
             // 
             // RanZaCm
             // 
@@ -410,22 +427,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // HASTB
-            // 
-            this.HASTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HASTB.Location = new System.Drawing.Point(30, 68);
-            this.HASTB.Name = "HASTB";
-            this.HASTB.Size = new System.Drawing.Size(250, 21);
-            this.HASTB.TabIndex = 21;
-            // 
-            // RantarTB
-            // 
-            this.RantarTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RantarTB.Location = new System.Drawing.Point(30, 158);
-            this.RantarTB.Name = "RantarTB";
-            this.RantarTB.Size = new System.Drawing.Size(250, 21);
-            this.RantarTB.TabIndex = 22;
             // 
             // Form1
             // 
