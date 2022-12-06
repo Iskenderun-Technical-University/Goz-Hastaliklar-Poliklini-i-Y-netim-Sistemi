@@ -115,7 +115,36 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                if (HASTB.Text == "" || RantarTB.Text == "" || RanZaCm.SelectedIndex == -1)
+                {
+                    MessageBox.Show("kaybolan veri");
+
+                }
+                else
+                {
+                    string Hasta = HASTB.Text;
+                    string RandevuTarihi = RantarTB.Text;
+                    string RandevuZamani = RanZaCm.SelectedItem.ToString();
+
+                    string Query = "update RandevuTbl  set Hastalar ='{0}',RandTarihi = '{1}',RandZamanı = '{2}'  where Randİd= '{3}'";
+
+                    Query = string.Format(Query, Hasta, RandevuTarihi, RandevuZamani, Key);
+                    Con.SetData(Query);
+                    ShowRandevu();
+                    MessageBox.Show("  Randevu Güncellendi");
+                    HASTB.Text = "";
+                    RantarTB.Text = "";
+                    RanZaCm.SelectedIndex = -1;
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
