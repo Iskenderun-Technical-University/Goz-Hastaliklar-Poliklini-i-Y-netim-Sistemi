@@ -120,8 +120,38 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (HASTB.Text == "" || RantarTB.Text == "" || RanZaCm.SelectedIndex == -1)
+                {
+                    MessageBox.Show("kaybolan veri");
 
-          
+                }
+                else
+                {
+                    string Hasta = HASTB.Text;
+                    string RandevuTarihi = RantarTB.Text;
+                    string RandevuZamani = RanZaCm.SelectedItem.ToString();
+
+                    string Query = "insert into RandevuTbl values ('{0}', '{1}', '{2}')";
+
+                    Query = string.Format(Query, Hasta, RandevuTarihi, RandevuZamani, Key);
+                    Con.SetData(Query);
+                    ShowRandevu();
+                    MessageBox.Show(" Randevu Eklendi");
+                    HASTB.Text = "";
+                    RantarTB.Text = "";
+                    RanZaCm.SelectedIndex = -1;
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
+
+
 
         }
     }
