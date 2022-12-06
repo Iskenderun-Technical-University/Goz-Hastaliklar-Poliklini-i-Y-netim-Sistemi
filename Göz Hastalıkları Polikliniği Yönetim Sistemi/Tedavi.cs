@@ -12,11 +12,25 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
     public partial class Tedavi : Form
     {
+        fonkisyon Con;
         public Tedavi()
         {
             InitializeComponent();
+            Con = new fonkisyon();
+            ShowTedavi();
         }
-
+        private void ShowTedavi()
+        {
+            try
+            {
+                string Query = "Select * from TedaviTbl";
+                TedaviListesi.DataSource = Con.GetData(Query);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
         private void bunifuTextbox5_OnTextChange(object sender, EventArgs e)
         {
 
@@ -53,6 +67,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             Reçete obj = new Reçete();
             obj.Show();
             this.Hide();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
