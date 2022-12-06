@@ -36,14 +36,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.RanZaCm = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RandevuListesi = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -62,11 +60,13 @@
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.HASTB = new System.Windows.Forms.TextBox();
+            this.RantarTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RandevuListesi)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -107,6 +107,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Kaydet";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -133,13 +134,14 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.bunifuDatepicker1);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.RantarTB);
+            this.panel4.Controls.Add(this.HASTB);
+            this.panel4.Controls.Add(this.RanZaCm);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -147,56 +149,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(452, 395);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // bunifuDatepicker1
+            // RanZaCm
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Teal;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(30, 154);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 36);
-            this.bunifuDatepicker1.TabIndex = 16;
-            this.bunifuDatepicker1.Value = new System.DateTime(2022, 11, 24, 16, 32, 15, 894);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Teal;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.RanZaCm.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.RanZaCm.BackColor = System.Drawing.Color.White;
+            this.RanZaCm.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RanZaCm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RanZaCm.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RanZaCm.ForeColor = System.Drawing.Color.Teal;
+            this.RanZaCm.FormattingEnabled = true;
+            this.RanZaCm.Items.AddRange(new object[] {
             "8 AM-10 AM",
             "10 AM-12 PM",
             "1 PM-3 PM",
             "3  PM-5 PM",
             "5 PM-7 PM"});
-            this.comboBox2.Location = new System.Drawing.Point(30, 254);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(274, 33);
-            this.comboBox2.TabIndex = 14;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Teal;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Erkek",
-            "Kadın"});
-            this.comboBox1.Location = new System.Drawing.Point(30, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 33);
-            this.comboBox1.TabIndex = 13;
+            this.RanZaCm.Location = new System.Drawing.Point(30, 254);
+            this.RanZaCm.Name = "RanZaCm";
+            this.RanZaCm.Size = new System.Drawing.Size(274, 33);
+            this.RanZaCm.TabIndex = 14;
             // 
             // label6
             // 
@@ -235,21 +208,23 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.RandevuListesi);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(486, 14);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(531, 492);
             this.panel3.TabIndex = 0;
             // 
-            // dataGridView1
+            // RandevuListesi
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(482, 436);
-            this.dataGridView1.TabIndex = 2;
+            this.RandevuListesi.BackgroundColor = System.Drawing.Color.White;
+            this.RandevuListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RandevuListesi.Location = new System.Drawing.Point(25, 53);
+            this.RandevuListesi.Name = "RandevuListesi";
+            this.RandevuListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.RandevuListesi.Size = new System.Drawing.Size(482, 436);
+            this.RandevuListesi.TabIndex = 2;
+            this.RandevuListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label7
             // 
@@ -436,6 +411,22 @@
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // HASTB
+            // 
+            this.HASTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HASTB.Location = new System.Drawing.Point(30, 68);
+            this.HASTB.Name = "HASTB";
+            this.HASTB.Size = new System.Drawing.Size(250, 21);
+            this.HASTB.TabIndex = 21;
+            // 
+            // RantarTB
+            // 
+            this.RantarTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RantarTB.Location = new System.Drawing.Point(30, 158);
+            this.RantarTB.Name = "RantarTB";
+            this.RantarTB.Size = new System.Drawing.Size(250, 21);
+            this.RantarTB.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +441,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RandevuListesi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -489,14 +480,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RandevuListesi;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        public System.Windows.Forms.ComboBox comboBox2;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox RanZaCm;
+        private System.Windows.Forms.TextBox HASTB;
+        private System.Windows.Forms.TextBox RantarTB;
     }
 }

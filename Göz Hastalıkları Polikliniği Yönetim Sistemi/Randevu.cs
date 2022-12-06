@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,29 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
     public partial class Form1 : Form
     {
+        fonkisyon Con;
         public Form1()
         {
             InitializeComponent();
+            Con = new fonkisyon();
+            ShowRandevu();
         }
+        private void ShowRandevu()
+        {
+            try
+            {
+                string Query = "Select * from RandevuTbl";
+                RandevuListesi.DataSource = Con.GetData(Query);
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
+        }
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -64,5 +84,32 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             obj.Show();
             this.Hide();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        int Key = 0;
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+          
+
+        }
     }
 }
+
