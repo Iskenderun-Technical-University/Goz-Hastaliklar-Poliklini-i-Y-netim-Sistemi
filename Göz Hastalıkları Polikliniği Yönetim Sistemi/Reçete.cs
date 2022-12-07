@@ -45,5 +45,20 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             obj.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leble1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HasTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

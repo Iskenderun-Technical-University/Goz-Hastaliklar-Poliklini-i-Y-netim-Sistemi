@@ -36,18 +36,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FiyatTB = new System.Windows.Forms.TextBox();
+            this.MikTB = new System.Windows.Forms.TextBox();
+            this.İlTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.leble1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReçeteLİstesi = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -66,11 +64,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.HasTB = new System.Windows.Forms.TextBox();
+            this.TedTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReçeteLİstesi)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -137,48 +137,49 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Güncelle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.TedTB);
+            this.panel4.Controls.Add(this.HasTB);
+            this.panel4.Controls.Add(this.FiyatTB);
+            this.panel4.Controls.Add(this.MikTB);
+            this.panel4.Controls.Add(this.İlTB);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.leble1);
             this.panel4.Location = new System.Drawing.Point(7, 14);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(473, 529);
             this.panel4.TabIndex = 1;
             // 
-            // textBox3
+            // FiyatTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.textBox3.Location = new System.Drawing.Point(30, 465);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 40);
-            this.textBox3.TabIndex = 22;
+            this.FiyatTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FiyatTB.Location = new System.Drawing.Point(30, 465);
+            this.FiyatTB.Name = "FiyatTB";
+            this.FiyatTB.Size = new System.Drawing.Size(250, 27);
+            this.FiyatTB.TabIndex = 22;
             // 
-            // textBox2
+            // MikTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.textBox2.Location = new System.Drawing.Point(30, 357);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 40);
-            this.textBox2.TabIndex = 21;
+            this.MikTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MikTB.Location = new System.Drawing.Point(30, 357);
+            this.MikTB.Name = "MikTB";
+            this.MikTB.Size = new System.Drawing.Size(250, 27);
+            this.MikTB.TabIndex = 21;
             // 
-            // textBox1
+            // İlTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.textBox1.Location = new System.Drawing.Point(30, 257);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 40);
-            this.textBox1.TabIndex = 20;
+            this.İlTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.İlTB.Location = new System.Drawing.Point(30, 257);
+            this.İlTB.Name = "İlTB";
+            this.İlTB.Size = new System.Drawing.Size(250, 27);
+            this.İlTB.TabIndex = 20;
             // 
             // label4
             // 
@@ -202,43 +203,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Miktar";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Teal;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "8 AM-10 AM",
-            "10 AM-12 PM",
-            "1 PM-3 PM",
-            "3  PM-5 PM",
-            "5 PM-7 PM"});
-            this.comboBox2.Location = new System.Drawing.Point(30, 166);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(274, 33);
-            this.comboBox2.TabIndex = 14;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Teal;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Erkek",
-            "Kadın"});
-            this.comboBox1.Location = new System.Drawing.Point(30, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 33);
-            this.comboBox1.TabIndex = 13;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -261,35 +225,36 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tedavi";
             // 
-            // label1
+            // leble1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(25, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Randevu";
+            this.leble1.AutoSize = true;
+            this.leble1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leble1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.leble1.Location = new System.Drawing.Point(25, 24);
+            this.leble1.Name = "leble1";
+            this.leble1.Size = new System.Drawing.Size(72, 26);
+            this.leble1.TabIndex = 0;
+            this.leble1.Text = "Hasta";
+            this.leble1.Click += new System.EventHandler(this.leble1_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.ReçeteLİstesi);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(486, 14);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(531, 492);
             this.panel3.TabIndex = 0;
             // 
-            // dataGridView1
+            // ReçeteLİstesi
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(482, 436);
-            this.dataGridView1.TabIndex = 2;
+            this.ReçeteLİstesi.BackgroundColor = System.Drawing.Color.White;
+            this.ReçeteLİstesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReçeteLİstesi.Location = new System.Drawing.Point(25, 53);
+            this.ReçeteLİstesi.Name = "ReçeteLİstesi";
+            this.ReçeteLİstesi.Size = new System.Drawing.Size(482, 436);
+            this.ReçeteLİstesi.TabIndex = 2;
             // 
             // label7
             // 
@@ -476,6 +441,23 @@
             this.label11.Text = "Hastalar";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
+            // HasTB
+            // 
+            this.HasTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.HasTB.Location = new System.Drawing.Point(30, 62);
+            this.HasTB.Name = "HasTB";
+            this.HasTB.Size = new System.Drawing.Size(250, 26);
+            this.HasTB.TabIndex = 23;
+            this.HasTB.TextChanged += new System.EventHandler(this.HasTB_TextChanged);
+            // 
+            // TedTB
+            // 
+            this.TedTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TedTB.Location = new System.Drawing.Point(30, 168);
+            this.TedTB.Name = "TedTB";
+            this.TedTB.Size = new System.Drawing.Size(250, 26);
+            this.TedTB.TabIndex = 24;
+            // 
             // Reçete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,7 +472,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReçeteLİstesi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -506,19 +488,16 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label leble1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ReçeteLİstesi;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel1;
@@ -539,8 +518,10 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FiyatTB;
+        private System.Windows.Forms.TextBox MikTB;
+        private System.Windows.Forms.TextBox İlTB;
+        private System.Windows.Forms.TextBox TedTB;
+        private System.Windows.Forms.TextBox HasTB;
     }
 }
