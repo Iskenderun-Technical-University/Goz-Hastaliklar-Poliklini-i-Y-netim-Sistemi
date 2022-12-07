@@ -126,5 +126,42 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTB.Text == "")
+                {
+                    MessageBox.Show("kaybolan veri");
+
+                }
+                else
+                {
+                    string Hasta = HasTB.Text;
+                    string Tedavi = TedTB.Text;
+                    string İlaç = İlTB.Text;                 
+                    string Miktar = MikTB.Text;
+                    string Fiyat = FiyatTB.Text;
+                    string Query = "insert into ReçeteTbl values('{0}', '{1}', '{2}', '{3}', '{4}')";
+
+                    Query = string.Format(Query, Hasta,Tedavi, İlaç, Miktar, Fiyat);
+                    Con.SetData(Query);
+                    ShowReçete();
+                    MessageBox.Show(" Reçete Eklendi");
+                    HasTB.Text = "";
+                    TedTB.Text = "";
+                    İlTB.Text = "";
+                    MikTB.Text = "";
+                    FiyatTB.Text = "";
+                    
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
