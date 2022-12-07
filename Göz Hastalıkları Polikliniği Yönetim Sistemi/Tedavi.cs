@@ -120,5 +120,37 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TedAdTB.Text == "" || TedFiyatTB.Text == "" )
+                {
+                    MessageBox.Show("kaybolan veri");
+
+                }
+                else
+                {
+                    string TedaviAdı = TedAdTB.Text;
+                    string TedaviFiyatı = TedFiyatTB.Text;
+
+                    string Query = "update  TedaviTbl set TedaviAdı ='{0}',TedaviFiyati = '{1}', where Tedaviİd = '{2}'";
+
+                    Query = string.Format(Query, TedaviAdı, TedaviFiyatı, Key);
+                    Con.SetData(Query);
+                    ShowTedavi();
+                    MessageBox.Show(" Tedavi Güncellendi");
+                    TedAdTB.Text = "";
+                    TedFiyatTB.Text = "";
+                    
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
