@@ -135,7 +135,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     string TedaviAdı = TedAdTB.Text;
                     string TedaviFiyatı = TedFiyatTB.Text;
 
-                    string Query = "update  TedaviTbl set TedaviAdı ='{0}',TedaviFiyati = '{1}', where Tedaviİd = '{2}'";
+                    string Query = "update  TedaviTbl set TedaviAdı ='{0}',TedaviFiyati = '{1}' where Tedaviİd = '{2}'";
 
                     Query = string.Format(Query, TedaviAdı, TedaviFiyatı, Key);
                     Con.SetData(Query);
