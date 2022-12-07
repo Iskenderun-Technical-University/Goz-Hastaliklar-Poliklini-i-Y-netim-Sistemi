@@ -105,6 +105,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Kaydet";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -199,6 +200,7 @@
             this.TedaviListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TedaviListesi.Location = new System.Drawing.Point(3, 53);
             this.TedaviListesi.Name = "TedaviListesi";
+            this.TedaviListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TedaviListesi.Size = new System.Drawing.Size(482, 436);
             this.TedaviListesi.TabIndex = 2;
             this.TedaviListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);

@@ -87,5 +87,38 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (TedAdTB.Text == "" || TedFiyatTB.Text == "" )
+                {
+                    MessageBox.Show("kaybolan veri");
+
+                }
+                else
+                {
+                    string TedaviAdı = TedAdTB.Text;
+                    string TedaviFiyatı = TedFiyatTB.Text;
+                    
+                    string Query = "insert into  TedaviTbl values('{0}', '{1}')";
+
+                    Query = string.Format(Query, TedaviAdı , TedaviFiyatı);
+                    Con.SetData(Query);
+                    ShowTedavi();
+                    MessageBox.Show(" Tedavi  Eklendi");
+                    TedAdTB.Text = "";
+                    TedFiyatTB.Text = "";
+                    
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
