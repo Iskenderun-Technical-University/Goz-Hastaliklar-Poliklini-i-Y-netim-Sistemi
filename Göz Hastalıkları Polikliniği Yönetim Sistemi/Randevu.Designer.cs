@@ -295,6 +295,7 @@
             this.label12.Size = new System.Drawing.Size(76, 31);
             this.label12.TabIndex = 25;
             this.label12.Text = "Çıkış";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox6
             // 

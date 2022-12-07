@@ -36,6 +36,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.FiyatTb = new System.Windows.Forms.TextBox();
+            this.Fiyat = new System.Windows.Forms.Label();
             this.TedTB = new System.Windows.Forms.TextBox();
             this.HasTB = new System.Windows.Forms.TextBox();
             this.MikTB = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Fiyat = new System.Windows.Forms.Label();
-            this.FiyatTb = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -158,6 +158,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(473, 529);
             this.panel4.TabIndex = 1;
+            // 
+            // FiyatTb
+            // 
+            this.FiyatTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FiyatTb.Location = new System.Drawing.Point(30, 453);
+            this.FiyatTb.Name = "FiyatTb";
+            this.FiyatTb.Size = new System.Drawing.Size(250, 27);
+            this.FiyatTb.TabIndex = 26;
+            this.FiyatTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Fiyat
+            // 
+            this.Fiyat.AutoSize = true;
+            this.Fiyat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fiyat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Fiyat.Location = new System.Drawing.Point(25, 424);
+            this.Fiyat.Name = "Fiyat";
+            this.Fiyat.Size = new System.Drawing.Size(66, 26);
+            this.Fiyat.TabIndex = 25;
+            this.Fiyat.Text = "Fiyat";
             // 
             // TedTB
             // 
@@ -330,6 +350,7 @@
             this.label12.Size = new System.Drawing.Size(76, 31);
             this.label12.TabIndex = 25;
             this.label12.Text = "Çıkış";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox6
             // 
@@ -442,26 +463,6 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Hastalar";
             this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // Fiyat
-            // 
-            this.Fiyat.AutoSize = true;
-            this.Fiyat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fiyat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Fiyat.Location = new System.Drawing.Point(25, 424);
-            this.Fiyat.Name = "Fiyat";
-            this.Fiyat.Size = new System.Drawing.Size(66, 26);
-            this.Fiyat.TabIndex = 25;
-            this.Fiyat.Text = "Fiyat";
-            // 
-            // FiyatTb
-            // 
-            this.FiyatTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.FiyatTb.Location = new System.Drawing.Point(30, 453);
-            this.FiyatTb.Name = "FiyatTb";
-            this.FiyatTb.Size = new System.Drawing.Size(250, 27);
-            this.FiyatTb.TabIndex = 26;
-            this.FiyatTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Reçete
             // 
