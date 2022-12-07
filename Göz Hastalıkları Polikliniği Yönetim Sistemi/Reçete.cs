@@ -74,9 +74,23 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        int Key = 0;
         private void ReçeteLİstesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            HasTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[1].Value.ToString();
+
+            TedTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[2].Value.ToString();
+            İlTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[3].Value.ToString();
+            MikTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[4].Value.ToString();
+           
+            if (HasTB.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(ReçeteLİstesi.SelectedRows[0].Cells[0].Value.ToString());
+            }
 
         }
     }

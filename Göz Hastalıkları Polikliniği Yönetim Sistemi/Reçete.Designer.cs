@@ -270,6 +270,7 @@
             this.ReçeteLİstesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReçeteLİstesi.Location = new System.Drawing.Point(25, 53);
             this.ReçeteLİstesi.Name = "ReçeteLİstesi";
+            this.ReçeteLİstesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ReçeteLİstesi.Size = new System.Drawing.Size(482, 436);
             this.ReçeteLİstesi.TabIndex = 2;
             this.ReçeteLİstesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReçeteLİstesi_CellContentClick);
