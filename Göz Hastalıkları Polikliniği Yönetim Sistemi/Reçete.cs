@@ -62,7 +62,40 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTB.Text == "")
+                {
+                    MessageBox.Show("kaybolan veri");
 
+                }
+                else
+                {
+                    string Hasta = HasTB.Text;
+                    string Tedavi = TedTB.Text;
+                    string İlaç = İlTB.Text;
+                    string Miktar = MikTB.Text;
+                    string Fiyat = FiyatTB.Text;
+
+                    string Query = "update ReçeteTbl  set Hasta ='{0}',Tedavi = '{1}',İlaç = '{2}',Miktar = '{3}',Fiyat = '{4}', where Reçİd= '{5}'";
+
+                    Query = string.Format(Query, Hasta, Tedavi, İlaç, Miktar, Fiyat, Key);
+                    Con.SetData(Query);
+                    ShowReçete();
+                    MessageBox.Show(" Reçete Güncellendi");
+                    HasTB.Text = "";
+                    TedTB.Text = "";
+                    İlTB.Text = "";
+                    MikTB.Text = "";
+                    FiyatTB.Text = "";
+
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
 
         private void leble1_Click(object sender, EventArgs e)
