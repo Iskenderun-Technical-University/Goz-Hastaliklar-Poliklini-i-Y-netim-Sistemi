@@ -152,5 +152,35 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Key == 0)
+                {
+                    MessageBox.Show("tedaviyi seç");
+
+                }
+                else
+                {
+
+                    string Query = " delete from TedaviTbl  where Tedaviİd = '{0}'";
+
+                    Query = string.Format(Query, Key);
+                    Con.SetData(Query);
+                    ShowTedavi();
+                    MessageBox.Show(" Tedavi Silindi");
+                    TedAdTB.Text = "";
+                    TedFiyatTB.Text = "";
+                   
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
