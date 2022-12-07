@@ -163,5 +163,38 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Key == 0)
+                {
+                    MessageBox.Show("hastayı seç");
+
+                }
+                else
+                {
+
+                    string Query = " delete from ReçeteTbl  where Reçİd = '{0}'";
+
+                    Query = string.Format(Query, Key);
+                    Con.SetData(Query);
+                    ShowReçete();
+                    MessageBox.Show(" Hasta Silindi");
+                    HasTB.Text = "";
+                    TedTB.Text = "";
+                    İlTB.Text = "";
+                    MikTB.Text = "";
+                    FiyatTB.Text = "";
+                   
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
     }
 }
