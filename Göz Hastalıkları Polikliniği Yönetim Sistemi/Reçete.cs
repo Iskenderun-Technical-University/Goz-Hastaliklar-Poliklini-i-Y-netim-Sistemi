@@ -64,7 +64,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
             try
             {
-                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTB.Text == "")
+                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTb.Text == "")
                 {
                     MessageBox.Show("kaybolan veri");
 
@@ -75,11 +75,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     string Tedavi = TedTB.Text;
                     string İlaç = İlTB.Text;
                     string Miktar = MikTB.Text;
-                    string Fiyat = FiyatTB.Text;
+                    string Fiyat = FiyatTb.Text;
 
-                    string Query = "update ReçeteTbl  set Hasta ='{0}',Tedavi = '{1}',İlaç = '{2}',Miktar = '{3}',Fiyat = '{4}', where Reçİd= '{5}'";
+                    string Query = "update ReçeteTbl  set Hasta ='{0}',Tedavi = '{1}',İlaç = '{2}',Miktar = '{3}',Fiyat='{4}' where Reçİd= '{5}'";
 
-                    Query = string.Format(Query, Hasta, Tedavi, İlaç, Miktar, Fiyat, Key);
+                    Query = string.Format(Query, Hasta, Tedavi, İlaç, Miktar,Fiyat, Key);
                     Con.SetData(Query);
                     ShowReçete();
                     MessageBox.Show(" Reçete Güncellendi");
@@ -87,7 +87,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     TedTB.Text = "";
                     İlTB.Text = "";
                     MikTB.Text = "";
-                    FiyatTB.Text = "";
+                    FiyatTb.Text = "";
 
 
                 }
@@ -115,7 +115,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             TedTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[2].Value.ToString();
             İlTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[3].Value.ToString();
             MikTB.Text = ReçeteLİstesi.SelectedRows[0].Cells[4].Value.ToString();
-           
+           FiyatTb.Text = ReçeteLİstesi.SelectedRows[0].Cells[5].Value.ToString();
             if (HasTB.Text == "")
             {
                 Key = 0;
@@ -131,7 +131,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
             try
             {
-                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTB.Text == "")
+                if (HasTB.Text == "" || TedTB.Text == "" || İlTB.Text == "" || MikTB.Text == "" || FiyatTb.Text == "")
                 {
                     MessageBox.Show("kaybolan veri");
 
@@ -142,10 +142,10 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     string Tedavi = TedTB.Text;
                     string İlaç = İlTB.Text;                 
                     string Miktar = MikTB.Text;
-                    string Fiyat = FiyatTB.Text;
-                    string Query = "insert into ReçeteTbl values('{0}', '{1}', '{2}', '{3}', '{4}')";
+                    string Fiyat = FiyatTb.Text;
+                    string Query = "insert into ReçeteTbl values('{0}', '{1}', '{2}', '{3}','{4}')";
 
-                    Query = string.Format(Query, Hasta,Tedavi, İlaç, Miktar, Fiyat);
+                    Query = string.Format(Query, Hasta,Tedavi, İlaç, Miktar,Fiyat);
                     Con.SetData(Query);
                     ShowReçete();
                     MessageBox.Show(" Reçete Eklendi");
@@ -153,7 +153,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     TedTB.Text = "";
                     İlTB.Text = "";
                     MikTB.Text = "";
-                    FiyatTB.Text = "";
+                    FiyatTb.Text = "";
                     
 
                 }
@@ -186,7 +186,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     TedTB.Text = "";
                     İlTB.Text = "";
                     MikTB.Text = "";
-                    FiyatTB.Text = "";
+                    Fiyat.Text = "";
                    
 
                 }
@@ -195,6 +195,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             {
                 MessageBox.Show(Ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

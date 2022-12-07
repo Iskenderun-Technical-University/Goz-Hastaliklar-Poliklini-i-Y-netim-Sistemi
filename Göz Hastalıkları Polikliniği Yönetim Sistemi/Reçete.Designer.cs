@@ -38,10 +38,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.TedTB = new System.Windows.Forms.TextBox();
             this.HasTB = new System.Windows.Forms.TextBox();
-            this.FiyatTB = new System.Windows.Forms.TextBox();
             this.MikTB = new System.Windows.Forms.TextBox();
             this.İlTB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,6 +64,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Fiyat = new System.Windows.Forms.Label();
+            this.FiyatTb = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -144,12 +144,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.FiyatTb);
+            this.panel4.Controls.Add(this.Fiyat);
             this.panel4.Controls.Add(this.TedTB);
             this.panel4.Controls.Add(this.HasTB);
-            this.panel4.Controls.Add(this.FiyatTB);
             this.panel4.Controls.Add(this.MikTB);
             this.panel4.Controls.Add(this.İlTB);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label2);
@@ -176,14 +176,6 @@
             this.HasTB.TabIndex = 23;
             this.HasTB.TextChanged += new System.EventHandler(this.HasTB_TextChanged);
             // 
-            // FiyatTB
-            // 
-            this.FiyatTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.FiyatTB.Location = new System.Drawing.Point(30, 465);
-            this.FiyatTB.Name = "FiyatTB";
-            this.FiyatTB.Size = new System.Drawing.Size(250, 27);
-            this.FiyatTB.TabIndex = 22;
-            // 
             // MikTB
             // 
             this.MikTB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -199,17 +191,6 @@
             this.İlTB.Name = "İlTB";
             this.İlTB.Size = new System.Drawing.Size(250, 27);
             this.İlTB.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(25, 436);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 26);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Fiyat";
             // 
             // label3
             // 
@@ -462,6 +443,26 @@
             this.label11.Text = "Hastalar";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
+            // Fiyat
+            // 
+            this.Fiyat.AutoSize = true;
+            this.Fiyat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fiyat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Fiyat.Location = new System.Drawing.Point(25, 424);
+            this.Fiyat.Name = "Fiyat";
+            this.Fiyat.Size = new System.Drawing.Size(66, 26);
+            this.Fiyat.TabIndex = 25;
+            this.Fiyat.Text = "Fiyat";
+            // 
+            // FiyatTb
+            // 
+            this.FiyatTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FiyatTb.Location = new System.Drawing.Point(30, 453);
+            this.FiyatTb.Name = "FiyatTb";
+            this.FiyatTb.Size = new System.Drawing.Size(250, 27);
+            this.FiyatTb.TabIndex = 26;
+            this.FiyatTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Reçete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,12 +521,12 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox FiyatTB;
         private System.Windows.Forms.TextBox MikTB;
         private System.Windows.Forms.TextBox İlTB;
         private System.Windows.Forms.TextBox TedTB;
         private System.Windows.Forms.TextBox HasTB;
+        private System.Windows.Forms.TextBox FiyatTb;
+        private System.Windows.Forms.Label Fiyat;
     }
 }
