@@ -12,11 +12,25 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
     public partial class Reçete : Form
     {
+        fonkisyon Con;
         public Reçete()
         {
             InitializeComponent();
+            Con = new fonkisyon();
+            ShowReçete();
         }
-
+        private void ShowReçete()
+        {
+            try
+            {
+                string Query = "Select * from ReçeteTbl";
+                ReçeteLİstesi.DataSource = Con.GetData(Query);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
         private void label11_Click(object sender, EventArgs e)
         {
             Hastalar obj = new Hastalar();
@@ -57,6 +71,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         }
 
         private void HasTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReçeteLİstesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

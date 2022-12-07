@@ -36,6 +36,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.TedTB = new System.Windows.Forms.TextBox();
+            this.HasTB = new System.Windows.Forms.TextBox();
             this.FiyatTB = new System.Windows.Forms.TextBox();
             this.MikTB = new System.Windows.Forms.TextBox();
             this.İlTB = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.HasTB = new System.Windows.Forms.TextBox();
-            this.TedTB = new System.Windows.Forms.TextBox();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -156,6 +156,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(473, 529);
             this.panel4.TabIndex = 1;
+            // 
+            // TedTB
+            // 
+            this.TedTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TedTB.Location = new System.Drawing.Point(30, 168);
+            this.TedTB.Name = "TedTB";
+            this.TedTB.Size = new System.Drawing.Size(250, 26);
+            this.TedTB.TabIndex = 24;
+            // 
+            // HasTB
+            // 
+            this.HasTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.HasTB.Location = new System.Drawing.Point(30, 62);
+            this.HasTB.Name = "HasTB";
+            this.HasTB.Size = new System.Drawing.Size(250, 26);
+            this.HasTB.TabIndex = 23;
+            this.HasTB.TextChanged += new System.EventHandler(this.HasTB_TextChanged);
             // 
             // FiyatTB
             // 
@@ -255,6 +272,7 @@
             this.ReçeteLİstesi.Name = "ReçeteLİstesi";
             this.ReçeteLİstesi.Size = new System.Drawing.Size(482, 436);
             this.ReçeteLİstesi.TabIndex = 2;
+            this.ReçeteLİstesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReçeteLİstesi_CellContentClick);
             // 
             // label7
             // 
@@ -440,23 +458,6 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Hastalar";
             this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // HasTB
-            // 
-            this.HasTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.HasTB.Location = new System.Drawing.Point(30, 62);
-            this.HasTB.Name = "HasTB";
-            this.HasTB.Size = new System.Drawing.Size(250, 26);
-            this.HasTB.TabIndex = 23;
-            this.HasTB.TextChanged += new System.EventHandler(this.HasTB_TextChanged);
-            // 
-            // TedTB
-            // 
-            this.TedTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TedTB.Location = new System.Drawing.Point(30, 168);
-            this.TedTB.Name = "TedTB";
-            this.TedTB.Size = new System.Drawing.Size(250, 26);
-            this.TedTB.TabIndex = 24;
             // 
             // Reçete
             // 
