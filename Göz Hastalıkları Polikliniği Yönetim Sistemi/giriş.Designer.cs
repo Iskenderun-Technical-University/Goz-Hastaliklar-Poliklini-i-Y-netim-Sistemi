@@ -160,19 +160,19 @@
             // 
             // KullancıTb
             // 
-            this.KullancıTb.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.KullancıTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.KullancıTb.Location = new System.Drawing.Point(111, 256);
             this.KullancıTb.Name = "KullancıTb";
-            this.KullancıTb.Size = new System.Drawing.Size(250, 33);
+            this.KullancıTb.Size = new System.Drawing.Size(250, 27);
             this.KullancıTb.TabIndex = 9;
             this.KullancıTb.TextChanged += new System.EventHandler(this.KAd_TextChanged);
             // 
             // SifreTb
             // 
-            this.SifreTb.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.SifreTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.SifreTb.Location = new System.Drawing.Point(111, 350);
             this.SifreTb.Name = "SifreTb";
-            this.SifreTb.Size = new System.Drawing.Size(250, 33);
+            this.SifreTb.Size = new System.Drawing.Size(250, 27);
             this.SifreTb.TabIndex = 10;
             this.SifreTb.TextChanged += new System.EventHandler(this.Sifre_TextChanged);
             // 

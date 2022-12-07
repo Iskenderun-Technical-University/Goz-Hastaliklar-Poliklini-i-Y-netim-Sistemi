@@ -69,9 +69,22 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             this.Hide();
 
         }
-
+        int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            TedAdTB.Text = TedaviListesi.SelectedRows[0].Cells[1].Value.ToString();
+
+            TedFiyatTB.Text = TedaviListesi.SelectedRows[0].Cells[2].Value.ToString();
+            
+            if (TedAdTB.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(TedaviListesi.SelectedRows[0].Cells[0].Value.ToString());
+            }
 
         }
     }
