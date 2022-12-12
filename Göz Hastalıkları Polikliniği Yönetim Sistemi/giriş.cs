@@ -61,9 +61,19 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             DialogResult cikis = new DialogResult();
             cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(cikis==DialogResult.Yes)
+            if (cikis == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -74,6 +84,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     MessageBox.Show("çıkış işlemi iptal edildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
         }
     }
 }

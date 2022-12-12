@@ -47,3 +47,18 @@ C:\Users\AFAK\Desktop\göz\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hast
 C:\Users\AFAK\Desktop\göz\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.csproj.CopyComplete
 C:\Users\AFAK\Desktop\göz\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.exe
 C:\Users\AFAK\Desktop\göz\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.pdb
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\bin\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.exe.config
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\bin\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.exe
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\bin\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.pdb
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.csproj.AssemblyReference.cache
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.GirişBtn.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.Hastalar.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.Properties.Resources.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.Form1.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.Reçete.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi.Tedavi.resources
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.csproj.GenerateResource.cache
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.csproj.CoreCompileInputs.cache
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.csproj.CopyComplete
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.exe
+C:\Users\Safaa Alngrees\Desktop\proje\Goz-Hastaliklar-Poliklini-i-Y-netim-Sistemi\Göz Hastalıkları Polikliniği Yönetim Sistemi\obj\Debug\Göz Hastalıkları Polikliniği Yönetim Sistemi.pdb
