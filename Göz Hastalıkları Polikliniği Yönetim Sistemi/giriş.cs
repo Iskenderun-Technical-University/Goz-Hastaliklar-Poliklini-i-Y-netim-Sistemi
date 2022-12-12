@@ -86,5 +86,28 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (KullancıTb.Text == "" || SifreTb.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!!!");
+
+            }
+            else
+            {
+                if (KullancıTb.Text == "Admin" && SifreTb.Text == "Sifre")
+                {
+                    Hastalar obj = new Hastalar();
+                    obj.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("geçersiz Bilgiler");
+                }
+            }
+
+        }
     }
 }
