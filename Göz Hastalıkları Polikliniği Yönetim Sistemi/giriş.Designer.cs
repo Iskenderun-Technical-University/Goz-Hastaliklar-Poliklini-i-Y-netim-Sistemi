@@ -126,6 +126,7 @@
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 15;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // pictureBox1
             // 
@@ -140,21 +141,21 @@
             // 
             // KullancıTb
             // 
-            this.KullancıTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KullancıTb.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.KullancıTb.Location = new System.Drawing.Point(147, 301);
             this.KullancıTb.Margin = new System.Windows.Forms.Padding(4);
             this.KullancıTb.Name = "KullancıTb";
-            this.KullancıTb.Size = new System.Drawing.Size(332, 32);
+            this.KullancıTb.Size = new System.Drawing.Size(332, 35);
             this.KullancıTb.TabIndex = 9;
             this.KullancıTb.TextChanged += new System.EventHandler(this.KAd_TextChanged);
             // 
             // SifreTb
             // 
-            this.SifreTb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SifreTb.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.SifreTb.Location = new System.Drawing.Point(148, 390);
             this.SifreTb.Margin = new System.Windows.Forms.Padding(4);
             this.SifreTb.Name = "SifreTb";
-            this.SifreTb.Size = new System.Drawing.Size(332, 32);
+            this.SifreTb.Size = new System.Drawing.Size(332, 35);
             this.SifreTb.TabIndex = 10;
             this.SifreTb.TextChanged += new System.EventHandler(this.Sifre_TextChanged);
             // 

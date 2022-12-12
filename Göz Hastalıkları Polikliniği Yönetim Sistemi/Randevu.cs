@@ -232,6 +232,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 }
             }
         }
+
+        private void RanZaCm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

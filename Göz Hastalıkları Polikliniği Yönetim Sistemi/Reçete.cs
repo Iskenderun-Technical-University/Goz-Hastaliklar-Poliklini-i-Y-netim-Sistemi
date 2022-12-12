@@ -219,5 +219,10 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 }
             }
         }
+
+        private void Fiyat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
