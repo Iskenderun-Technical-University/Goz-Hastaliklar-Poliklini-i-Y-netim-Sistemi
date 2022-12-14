@@ -108,6 +108,7 @@
     <EmbeddedResource Include="Tedavi.resx">
       <DependentUpon>Tedavi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

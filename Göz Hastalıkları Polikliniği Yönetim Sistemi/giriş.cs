@@ -109,5 +109,22 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+        // UsePasswordChar fonksiyonu kullandım eger true sifreyi gosterılsın degilse gosterilmesin
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked==true)
+            {
+                SifreTb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                SifreTb.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
