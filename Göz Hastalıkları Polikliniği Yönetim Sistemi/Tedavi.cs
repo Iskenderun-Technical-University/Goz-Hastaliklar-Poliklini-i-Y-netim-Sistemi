@@ -69,6 +69,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             this.Hide();
 
         }
+        //Textbox'lardan TedaviListeye Row ekledim
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -87,7 +88,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
-
+        // Tedavi kaydadilmesi için buttonu kodladım...
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -120,7 +121,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        // Tedavi güncellenmesi için buttonu kodladım...
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -152,7 +153,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        // Tedavi silinmesi için buttonu kodladım...
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -199,6 +200,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     MessageBox.Show("çıkış işlemi iptal edildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

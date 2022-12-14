@@ -41,7 +41,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        // Güncelleme buttonu hastanını bilgilerini rahat bir şekilde girebilmesi için kodladım
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -89,7 +89,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        // Hastanını bilgileri kaydetilsin diye  buttonu kodladım
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -127,7 +127,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        // Hastanını bilgileri silmesi için buttonu kodladım
         private void button2_Click(object sender, EventArgs e)
         {
             try

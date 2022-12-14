@@ -59,7 +59,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             obj.Show();
             this.Hide();
         }
-
+        // Reçete güncellenmesi için buttonu kodladım...
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -107,6 +107,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
+        // Reçete, reçete listesine eklenmek için DataGridView kodladım
         int Key = 0;
         private void ReçeteLİstesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,7 +127,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
-
+        // Reçete kaydetilsin diye  buttonu kodladım...
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -163,7 +164,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        // Reçete, reçete listesinden silinmesi için buttonu kodladım...
         private void button2_Click(object sender, EventArgs e)
         {
             try
