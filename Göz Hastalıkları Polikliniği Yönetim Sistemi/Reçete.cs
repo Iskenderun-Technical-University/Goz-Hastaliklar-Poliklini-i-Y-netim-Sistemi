@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
+    //recetelistesi veritabanina baglama kodu
     public partial class Reçete : Form
     {
         fonkisyon Con;
@@ -31,20 +32,21 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
+        //hastalar formuna gecmek icin kodu
         private void label11_Click(object sender, EventArgs e)
         {
             Hastalar obj = new Hastalar();
             obj.Show();
             this.Hide();
         }
-
+        //randevu formuna gecmek icin kodu
         private void label8_Click(object sender, EventArgs e)
         {
             Form1 obj = new Form1();
             obj.Show();
             this.Hide();
         }
-
+        //tedavi formuna gecmek icin kodu
         private void label10_Click(object sender, EventArgs e)
         {
 
@@ -52,14 +54,16 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             obj.ShowDialog();
             this.Hide();
         }
-
+        //recete formuna gecmek icin kodu
         private void label9_Click(object sender, EventArgs e)
         {
             Reçete obj = new Reçete();
             obj.Show();
             this.Hide();
         }
-        // Reçete güncellenmesi için buttonu kodladım...
+
+        //guncelleme botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu guncellenecek ve textbox ,combobox boşaltılacak 
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -107,6 +111,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
+        //Textbox'lardan HastalarListeye Row'lar ekledim 
         // Reçete, reçete listesine eklenmek için DataGridView kodladım
         int Key = 0;
         private void ReçeteLİstesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -127,8 +132,9 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
-        // Reçete kaydetilsin diye  buttonu kodladım...
-        private void button3_Click(object sender, EventArgs e)
+         //kaydet botunu kodladım eger butun bilgiler girilirmezse
+         //"kaybolan veri"yazılacak deilse randevu eklenecek ve textbox ,combobox boşaltılacak
+         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -164,14 +170,15 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-        // Reçete, reçete listesinden silinmesi için buttonu kodladım...
+        //silme botunu kodladım eger randevu secilmeze "randevu sec "yazılacak
+        // degilse randevu silinecek 
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 if (Key == 0)
                 {
-                    MessageBox.Show("hastayı seç");
+                    MessageBox.Show("reçete seç");
 
                 }
                 else
@@ -182,7 +189,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     Query = string.Format(Query, Key);
                     Con.SetData(Query);
                     ShowReçete();
-                    MessageBox.Show(" Hasta Silindi");
+                    MessageBox.Show(" reçete Silindi");
                     HasTB.Text = "";
                     TedTB.Text = "";
                     İlTB.Text = "";
@@ -202,10 +209,10 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //cıkış botunu kodlaması messagebox kullandım eger cıkıs yapmak istiyorsan bir message (yes,no)cıkacak
+        //no secersek "islem iptal edildi"yazilacak yes secersek programdan cıkacak
         private void label12_Click(object sender, EventArgs e)
         {
-
             DialogResult cikis = new DialogResult();
             cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cikis == DialogResult.Yes)
@@ -222,6 +229,16 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         }
 
         private void Fiyat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

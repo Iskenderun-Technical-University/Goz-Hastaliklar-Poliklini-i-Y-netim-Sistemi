@@ -60,6 +60,8 @@
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.HasAdTB = new System.Windows.Forms.TextBox();
+            this.leble1 = new System.Windows.Forms.Label();
             bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -88,9 +90,9 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(198, 22);
+            this.panel2.Location = new System.Drawing.Point(193, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1041, 586);
+            this.panel2.Size = new System.Drawing.Size(1033, 602);
             this.panel2.TabIndex = 0;
             // 
             // button3
@@ -99,7 +101,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(716, 527);
+            this.button3.Location = new System.Drawing.Point(579, 519);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 48);
             this.button3.TabIndex = 4;
@@ -113,7 +115,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(889, 527);
+            this.button2.Location = new System.Drawing.Point(744, 519);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 48);
             this.button2.TabIndex = 3;
@@ -127,7 +129,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(554, 527);
+            this.button1.Location = new System.Drawing.Point(425, 519);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 48);
             this.button1.TabIndex = 2;
@@ -138,19 +140,22 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.HasAdTB);
+            this.panel4.Controls.Add(this.leble1);
             this.panel4.Controls.Add(this.TedAdTB);
             this.panel4.Controls.Add(this.TedFiyatTB);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(22, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(447, 489);
+            this.panel4.Size = new System.Drawing.Size(367, 489);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // TedAdTB
             // 
             this.TedAdTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TedAdTB.Location = new System.Drawing.Point(30, 65);
+            this.TedAdTB.Location = new System.Drawing.Point(30, 164);
             this.TedAdTB.Name = "TedAdTB";
             this.TedAdTB.Size = new System.Drawing.Size(250, 21);
             this.TedAdTB.TabIndex = 14;
@@ -159,7 +164,7 @@
             // TedFiyatTB
             // 
             this.TedFiyatTB.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TedFiyatTB.Location = new System.Drawing.Point(30, 155);
+            this.TedFiyatTB.Location = new System.Drawing.Point(30, 247);
             this.TedFiyatTB.Name = "TedFiyatTB";
             this.TedFiyatTB.Size = new System.Drawing.Size(250, 21);
             this.TedFiyatTB.TabIndex = 13;
@@ -169,7 +174,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(26, 121);
+            this.label2.Location = new System.Drawing.Point(25, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 26);
             this.label2.TabIndex = 2;
@@ -180,7 +185,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(26, 36);
+            this.label1.Location = new System.Drawing.Point(25, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 26);
             this.label1.TabIndex = 0;
@@ -191,19 +196,20 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.TedaviListesi);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(486, 14);
+            this.panel3.Location = new System.Drawing.Point(405, 14);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(531, 492);
+            this.panel3.Size = new System.Drawing.Size(575, 492);
             this.panel3.TabIndex = 0;
             // 
             // TedaviListesi
             // 
+            this.TedaviListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TedaviListesi.BackgroundColor = System.Drawing.Color.White;
             this.TedaviListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TedaviListesi.Location = new System.Drawing.Point(3, 53);
+            this.TedaviListesi.Location = new System.Drawing.Point(20, 53);
             this.TedaviListesi.Name = "TedaviListesi";
             this.TedaviListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TedaviListesi.Size = new System.Drawing.Size(482, 436);
+            this.TedaviListesi.Size = new System.Drawing.Size(521, 436);
             this.TedaviListesi.TabIndex = 2;
             this.TedaviListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -394,6 +400,26 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // HasAdTB
+            // 
+            this.HasAdTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.HasAdTB.Location = new System.Drawing.Point(30, 70);
+            this.HasAdTB.Name = "HasAdTB";
+            this.HasAdTB.Size = new System.Drawing.Size(250, 26);
+            this.HasAdTB.TabIndex = 25;
+            this.HasAdTB.TextChanged += new System.EventHandler(this.HasTB_TextChanged);
+            // 
+            // leble1
+            // 
+            this.leble1.AutoSize = true;
+            this.leble1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leble1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.leble1.Location = new System.Drawing.Point(25, 24);
+            this.leble1.Name = "leble1";
+            this.leble1.Size = new System.Drawing.Size(72, 26);
+            this.leble1.TabIndex = 24;
+            this.leble1.Text = "Hasta";
+            // 
             // Tedavi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,5 +480,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private System.Windows.Forms.TextBox TedAdTB;
         private System.Windows.Forms.TextBox TedFiyatTB;
+        private System.Windows.Forms.TextBox HasAdTB;
+        private System.Windows.Forms.Label leble1;
     }
 }

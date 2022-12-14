@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
-{
+{// data base'e baglama kodu
     internal class fonkisyon
     {
         private SqlConnection Con;

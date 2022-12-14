@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
+    //randevulistesi veri tabanına baglama kodu
     public partial class Form1 : Form
     {
+      
         fonkisyon Con;
         public Form1()
         {
@@ -56,28 +58,28 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //randevu formuna gecmek icin kodu
         private void label8_Click(object sender, EventArgs e)
         {
             Form1 obj = new Form1();
             obj.Show();
             this.Hide();
         }
-
+        //tedavi formuna gecmek icin kodu
         private void label10_Click(object sender, EventArgs e)
         {
             Tedavi obj = new Tedavi();
             obj.ShowDialog();
             this.Hide();
         }
-
+        //hastalar formuna gecmek icin kodu
         private void label11_Click(object sender, EventArgs e)
         {
             Hastalar obj = new Hastalar();
             obj.Show();
             this.Hide();
         }
-
+        //recete formuna gecmek icin kodu
         private void label9_Click(object sender, EventArgs e)
         {
             Reçete obj = new Reçete();
@@ -89,6 +91,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
+        //Textbox'lardan HastalarListeye Row'lar ekledim 
+        // Reçete, reçete listesine eklenmek için DataGridView kodladım
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -112,9 +116,10 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
-        {
+        {      //guncelleme botunu kodladım eger butun bilgiler girilirmezse
+               //"kaybolan veri"yazılacak deilse randevu guncellenecek ve textbox ,combobox boşaltılacak 
             try
             {
                 if (HASTB.Text == "" || RantarTB.Text == "" || RanZaCm.SelectedIndex == -1)
@@ -146,7 +151,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
-
+        //kaydet botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu eklenecek ve textbox ,combobox boşaltılacak 
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -183,60 +189,68 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 
 
         }
-
+        //silme botunu kodladım eger randevu secilmeze "randevu sec "yazılacak
+        // degilse randevu silinecek 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            try
             {
-                if (Key == 0)
+                try
                 {
-                    MessageBox.Show("hastayı seç");
+                    if (Key == 0)
+                    {
+                        MessageBox.Show("randevu seç");
 
+                    }
+                    else
+                    {
+
+                        string Query = " delete from HastalarTbl  where Hasİd = '{0}'";
+
+                        Query = string.Format(Query, Key);
+                        Con.SetData(Query);
+                        ShowRandevu();
+                        MessageBox.Show(" randevu Silindi");
+                        HASTB.Text = "";
+                        RantarTB.Text = "";
+                        RanZaCm.SelectedIndex = -1;
+
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        } 
+        //cıkış botunu kodlaması messagebox kullandım eger cıkıs yapmak istiyorsan bir message (yes,no)cıkacak
+           //no secersek "islem iptal edildi"yazilacak yes secersek programdan cıkacak
+        private void label12_Click(object sender, EventArgs e)
+            {
+                DialogResult cikis = new DialogResult();
+                cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (cikis == DialogResult.Yes)
+                {
+                    Application.Exit();
                 }
                 else
                 {
-
-                    string Query = " delete from HastalarTbl  where Hasİd = '{0}'";
-
-                    Query = string.Format(Query, Key);
-                    Con.SetData(Query);
-                    ShowRandevu();
-                    MessageBox.Show(" Hasta Silindi");
-                    HASTB.Text = "";
-                    RantarTB.Text = "";
-                    RanZaCm.SelectedIndex = -1;
-                   
+                    if (cikis == DialogResult.No)
+                    {
+                        MessageBox.Show("çıkış işlemi iptal edildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
-            catch (Exception Ex)
+
+            private void RanZaCm_SelectedIndexChanged(object sender, EventArgs e)
             {
-                MessageBox.Show(Ex.Message);
+
             }
-        }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-            DialogResult cikis = new DialogResult();
-            cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (cikis == DialogResult.Yes)
+            private void panel5_Paint(object sender, PaintEventArgs e)
             {
-                Application.Exit();
-            }
-            else
-            {
-                if (cikis == DialogResult.No)
-                {
-                    MessageBox.Show("çıkış işlemi iptal edildi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
 
-        private void RanZaCm_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+            }
+        
     }
 }
 

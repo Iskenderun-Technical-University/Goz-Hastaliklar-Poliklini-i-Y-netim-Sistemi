@@ -23,7 +23,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {      //kullancı adı ve sifre kodlaması
             if(KullancıTb.Text == ""|| SifreTb.Text == "")
             {
                 MessageBox.Show("Missing Data!!!!!");
@@ -32,7 +32,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             else
             {
                 if(KullancıTb.Text=="Admin"&& SifreTb.Text=="Sifre")
-                {
+                { //hastalar formuna baglama kodu
                     Hastalar obj = new Hastalar();
                     obj.Show();
                     this.Hide();
@@ -68,7 +68,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //cıkış botunu kodlaması messagebox kullandım eger cıkıs yapmak istiyorsan bir message (yes,no)cıkacak
+        //no secersek "islem iptal edildi"yazilacak yes secersek programdan cıkacak
         private void button1_Click_1(object sender, EventArgs e)
         {
             DialogResult cikis = new DialogResult();

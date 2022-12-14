@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
+    //tedevilistesi veri tabanına baglama kodu
     public partial class Tedavi : Form
     {
         fonkisyon Con;
@@ -40,28 +41,28 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //tedavi formuna gecmek icin kodu
         private void label10_Click(object sender, EventArgs e)
         {
             Tedavi obj = new Tedavi();
             obj.Show();
             this.Hide();
         }
-
+        //randevu formuna gecmek icin kodu
         private void label8_Click(object sender, EventArgs e)
         {
             Form1 obj = new Form1();
             obj.Show();
             this.Hide();
         }
-
+        //hastalar formuna gecmek icin kodu
         private void label11_Click(object sender, EventArgs e)
         {
             Hastalar obj = new Hastalar();
             obj.Show();
             this.Hide();
         }
-
+        //recete formuna gecmek icin kodu
         private void label9_Click(object sender, EventArgs e)
         {
             Reçete obj = new Reçete();
@@ -69,16 +70,17 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             this.Hide();
 
         }
-        //Textbox'lardan TedaviListeye Row ekledim
+        //Textbox'lardan HastalarListeye Row'lar ekledim 
+        // Reçete, reçete listesine eklenmek için DataGridView kodladım
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            HasAdTB.Text= TedaviListesi.SelectedRows[0].Cells[1].Value.ToString();
+            TedAdTB.Text = TedaviListesi.SelectedRows[0].Cells[2].Value.ToString();
 
-            TedAdTB.Text = TedaviListesi.SelectedRows[0].Cells[1].Value.ToString();
-
-            TedFiyatTB.Text = TedaviListesi.SelectedRows[0].Cells[2].Value.ToString();
+            TedFiyatTB.Text = TedaviListesi.SelectedRows[0].Cells[3].Value.ToString();
             
-            if (TedAdTB.Text == "")
+            if (HasAdTB.Text == "")
             {
                 Key = 0;
             }
@@ -88,28 +90,31 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             }
 
         }
-        // Tedavi kaydadilmesi için buttonu kodladım...
+        //kaydet botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu eklenecek ve textbox ,combobox boşaltılacak 
         private void button3_Click(object sender, EventArgs e)
         {
 
             try
             {
-                if (TedAdTB.Text == "" || TedFiyatTB.Text == "" )
+                if (HasAdTB.Text==""|| TedAdTB.Text == "" || TedFiyatTB.Text == "" )
                 {
                     MessageBox.Show("kaybolan veri");
 
                 }
                 else
                 {
-                    string TedaviAdı = TedAdTB.Text;
+                    string HastaAdı = HasAdTB.Text;
+                     string TedaviAdı = TedAdTB.Text;
                     string TedaviFiyatı = TedFiyatTB.Text;
                     
-                    string Query = "insert into  TedaviTbl values('{0}', '{1}')";
+                    string Query = "insert into  TedaviTbl values('{0}', '{1}','{2}')";
 
-                    Query = string.Format(Query, TedaviAdı , TedaviFiyatı);
+                    Query = string.Format(Query,HastaAdı, TedaviAdı , TedaviFiyatı);
                     Con.SetData(Query);
                     ShowTedavi();
                     MessageBox.Show(" Tedavi  Eklendi");
+                    HasAdTB.Text = "";
                     TedAdTB.Text = "";
                     TedFiyatTB.Text = "";
                     
@@ -121,27 +126,30 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-        // Tedavi güncellenmesi için buttonu kodladım...
+        //guncelleme botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu guncellenecek ve textbox ,combobox boşaltılacak 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (TedAdTB.Text == "" || TedFiyatTB.Text == "" )
+                if (HasAdTB.Text == ""||TedAdTB.Text == "" || TedFiyatTB.Text == "" )
                 {
                     MessageBox.Show("kaybolan veri");
 
                 }
                 else
                 {
+                    string HastaAdı = HasAdTB.Text;
                     string TedaviAdı = TedAdTB.Text;
                     string TedaviFiyatı = TedFiyatTB.Text;
 
-                    string Query = "update  TedaviTbl set TedaviAdı ='{0}',TedaviFiyati = '{1}' where Tedaviİd = '{2}'";
+                    string Query = "update  TedaviTbl set HastaAdı='{0}', TedaviAdı ='{1}',TedaviFiyati = '{2}' where Tedaviİd = '{3}'";
 
-                    Query = string.Format(Query, TedaviAdı, TedaviFiyatı, Key);
+                    Query = string.Format(Query, HastaAdı,TedaviAdı, TedaviFiyatı, Key);
                     Con.SetData(Query);
                     ShowTedavi();
                     MessageBox.Show(" Tedavi Güncellendi");
+                    HasAdTB.Text = "";
                     TedAdTB.Text = "";
                     TedFiyatTB.Text = "";
                     
@@ -153,7 +161,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-        // Tedavi silinmesi için buttonu kodladım...
+        //silme botunu kodladım eger randevu secilmeze "randevu sec "yazılacak
+        // degilse randevu silinecek 
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -172,6 +181,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                     Con.SetData(Query);
                     ShowTedavi();
                     MessageBox.Show(" Tedavi Silindi");
+                    HasAdTB.Text = "";
                     TedAdTB.Text = "";
                     TedFiyatTB.Text = "";
                    
@@ -183,10 +193,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-
+        //cıkış botunu kodlaması messagebox kullandım eger cıkıs yapmak istiyorsan bir message (yes,no)cıkacak
+        //no secersek "islem iptal edildi"yazilacak yes secersek programdan cıkacak
         private void label12_Click(object sender, EventArgs e)
         {
-
+          
             DialogResult cikis = new DialogResult();
             cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cikis == DialogResult.Yes)
@@ -203,6 +214,16 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HasTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

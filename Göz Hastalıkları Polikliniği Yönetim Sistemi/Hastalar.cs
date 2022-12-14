@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
 {
+    //hastalarlistesi veri tabanına baglama kodu
     public partial class Hastalar : Form
-    {
+    { 
+       
         fonkisyon Con;
         public Hastalar()
         {
@@ -20,7 +22,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             ShowHastalar();
         }
         private void ShowHastalar()
-        {
+        {  
             try
             {
                 string Query = "Select * from HastalarTbl";
@@ -41,7 +43,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-        // Güncelleme buttonu hastanını bilgilerini rahat bir şekilde girebilmesi için kodladım
+        //guncelleme botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu guncellenecek ve textbox ,combobox boşaltılacak 
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -89,7 +92,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-        // Hastanını bilgileri kaydetilsin diye  buttonu kodladım
+        //kaydet botunu kodladım eger butun bilgiler girilirmezse
+        //"kaybolan veri"yazılacak deilse randevu eklenecek ve textbox ,combobox boşaltılacak 
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -127,7 +131,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
                 MessageBox.Show(Ex.Message);
             }
         }
-        // Hastanını bilgileri silmesi için buttonu kodladım
+        //silme botunu kodladım eger randevu secilmeze "randevu sec "yazılacak
+        // degilse randevu silinecek 
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -220,7 +225,8 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-        //Textbox'lardan HastalarListeye Row ekledim
+        //Textbox'lardan HastalarListeye Row'lar ekledim 
+        // Reçete, reçete listesine eklenmek için DataGridView kodladım
         int Key = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -251,10 +257,10 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //cıkış botunu kodlaması messagebox kullandım eger cıkıs yapmak istiyorsan bir message (yes,no)cıkacak
+        //no secersek "islem iptal edildi"yazilacak yes secersek programdan cıkacak
         private void label12_Click(object sender, EventArgs e)
         {
-
             DialogResult cikis = new DialogResult();
             cikis = MessageBox.Show("Programdan çıkmak istiyor musunuz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cikis == DialogResult.Yes)
@@ -299,7 +305,7 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         {
 
         }
-
+        //recete formuna gecmek icin kodu
         private void label9_Click(object sender, EventArgs e)
         {
             Reçete obj = new Reçete();
@@ -307,21 +313,21 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
             this.Hide();
 
         }
-
+        //randevu formuna gecmek icin kodu
         private void label8_Click(object sender, EventArgs e)
         {
             Form1 obj = new Form1();
             obj.Show();
             this.Hide();
         }
-
+        //tedavi formuna gecmek icin kodu
         private void label10_Click(object sender, EventArgs e)
         {
             Tedavi obj = new Tedavi();
             obj.ShowDialog();
             this.Hide();
         }
-
+        //hastalar formuna gecmek icin kodu
         private void label11_Click(object sender, EventArgs e)
         {
             Hastalar obj = new Hastalar();
@@ -331,6 +337,11 @@ namespace Göz_Hastalıkları_Polikliniği_Yönetim_Sistemi
         }
 
         private void HASAdTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HasTelTB_TextChanged(object sender, EventArgs e)
         {
 
         }
